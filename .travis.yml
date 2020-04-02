@@ -1,0 +1,21 @@
+language: node_js #lenguaje en el q rtrabajamos
+cache:  #sistema de cache para reducir el tiempo de proceso de la info
+  directories:
+    - ~/.npm
+node_js:
+  - '12'
+git: 
+  depth: 3 #leer el repo y entender su estructura
+script:
+  - yarn build 
+deploy: 
+  provider: pages
+  edge: true #sistema de control de versiones y cómo se accede
+  skip-cleanup: true ##estructura de cómo se genera cada compilación
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/
+  target-branch: gh-pages
+  commit_message: "Deploy Release"
+  on:
+    branch: master
