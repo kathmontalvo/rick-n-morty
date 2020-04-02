@@ -1,4 +1,26 @@
-.container {
-    background-color: blue;
-    height: 500px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+@import 'characters.scss';
+@import 'content.scss';
+@import 'header.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #3c484e;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

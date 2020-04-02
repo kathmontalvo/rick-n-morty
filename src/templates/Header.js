@@ -6,10 +6,10 @@ const Header = () => {
           <a href="/">Rick y Morty</a>
         </h1>
       </div>
+      <nav class=Header-nav">
+        <a href="#/about">About</a>
+      </nav>
     </div>
-    <nav class=""Header-nav>
-      <a href="#/about">About</a>
-    </nav>
     `;
   return view;
 };
